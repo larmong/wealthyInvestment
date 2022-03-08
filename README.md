@@ -1,7 +1,8 @@
-https://larmong.github.io/wealthyinvestment/
+https://larmong.github.io/wealthyInvestment/
 
 # WealthyInvestment v1.0
 2022.01.17 최초배포 --- v1.1
+
 2022.03.04 수정 --- v2.1
 
 
