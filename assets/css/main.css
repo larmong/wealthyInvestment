@@ -790,7 +790,7 @@ td.td_center {
         flex-direction: column;
         background: rgba(255, 255, 255, 0.9);
         transform: translateY(-100vh);
-        transition: .5s ease-in
+        transition: .5s ease;
     }
     .gnb li {
         height: 60px;
