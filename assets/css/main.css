@@ -194,17 +194,14 @@ html {
     color: #fff;
 }
 
-.ytb1 {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    height: 610px;
-}
-.ytb2, .ytb3, .ytb4 {
+.ytb1, .ytb2, .ytb3, .ytb4 {
     display: none;
     width: 100%;
     justify-content: space-between;
     height: 610px;
+}
+.s2_container > div.target {
+    display: flex;
 }
 
 

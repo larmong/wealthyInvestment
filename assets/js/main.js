@@ -135,60 +135,21 @@ function checkVisible( elm, eval ) {
 
 
 // youtube tabmenu
-let ytb1 = document.querySelector('.ytb1');
-let ytb2 = document.querySelector('.ytb2');
-let ytb3 = document.querySelector('.ytb3');
-let ytb4 = document.querySelector('.ytb4');
-let ytb1Btn = document.querySelector('.ytb_tab li:nth-child(1)');
-let ytb2Btn = document.querySelector('.ytb_tab li:nth-child(2)');
-let ytb3Btn = document.querySelector('.ytb_tab li:nth-child(3)');
-let ytb4Btn = document.querySelector('.ytb_tab li:nth-child(4)');
+for(let i = 1; i < 5; i++){
+    let s2ytb = document.querySelector('.ytb' + i);
+    let s2btn = document.querySelector('.ytb_tab li:nth-child(' + i + ')');
 
-// 비트시그널25시
-ytb1Btn.addEventListener('click', ()=>{
-    ytb1.style.display = 'flex'
-    ytb2.style.display = 'none'
-    ytb3.style.display = 'none'
-    ytb4.style.display = 'none'
-    youtubeCounter()
-    ytb1Btn.classList.add('target');
-    ytb2Btn.classList.remove('target');
-    ytb3Btn.classList.remove('target');
-    ytb4Btn.classList.remove('target');
-});
-ytb2Btn.addEventListener('click', ()=>{
-    ytb1.style.display = 'none'
-    ytb2.style.display = 'flex'
-    ytb3.style.display = 'none'
-    ytb4.style.display = 'none'
-    youtubeCounter()
-    ytb1Btn.classList.remove('target');
-    ytb2Btn.classList.add('target');
-    ytb3Btn.classList.remove('target');
-    ytb4Btn.classList.remove('target');
-});
-ytb3Btn.addEventListener('click', ()=>{
-    ytb1.style.display = 'none'
-    ytb2.style.display = 'none'
-    ytb3.style.display = 'flex'
-    ytb4.style.display = 'none'
-    youtubeCounter()
-    ytb1Btn.classList.remove('target');
-    ytb2Btn.classList.remove('target');
-    ytb3Btn.classList.add('target');
-    ytb4Btn.classList.remove('target');
-});
-ytb4Btn.addEventListener('click', ()=>{
-    ytb1.style.display = 'none'
-    ytb2.style.display = 'none'
-    ytb3.style.display = 'none'
-    ytb4.style.display = 'flex'
-    youtubeCounter()
-    ytb1Btn.classList.remove('target');
-    ytb2Btn.classList.remove('target');
-    ytb3Btn.classList.remove('target');
-    ytb4Btn.classList.add('target');
-});
+    s2btn.addEventListener('click', ()=>{
+        let btnTarget = document.querySelector('.ytb_tab > li.target');
+        let ytbTarget = document.querySelector('.s2_container > div.target');
+
+        btnTarget.classList.remove('target');
+        s2btn.classList.add('target');
+
+        ytbTarget.classList.remove('target');
+        s2ytb.classList.add('target');
+    });
+}
 
 
 // 구글지도
