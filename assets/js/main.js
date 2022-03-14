@@ -67,7 +67,8 @@ wingTop.addEventListener('click', function(){
     }, 100);
 });
 
-// modal 닫기
+
+// 모달 닫기
 let modal = document.querySelector('#modal');
 let modalClose = document.querySelector('.madal_close');
 
@@ -76,8 +77,7 @@ modalClose.addEventListener('click', function(){
 });
 
 
-
-// s2 유튜브카운터
+// 유튜브 카운터
 function youtubeCounter() {
     function numberCounter(target_frame, target_number) {
         this.count = 0; this.diff = 0;
@@ -111,8 +111,6 @@ function youtubeCounter() {
     new numberCounter("counter7", 24086);
     new numberCounter("counter8", 355249);
 }
-
-
 var isVisible = false;
 
 $(window).on('scroll',function() {
@@ -121,7 +119,6 @@ $(window).on('scroll',function() {
         isVisible=true;
     }
 });
-
 function checkVisible( elm, eval ) {
     eval = eval || "object visible";
     var viewportHeight = $(window).height() / 4,
@@ -134,7 +131,7 @@ function checkVisible( elm, eval ) {
 }
 
 
-// youtube tabmenu
+// 유튜브 탭 메뉴
 for(let i = 1; i < 5; i++){
     let s2ytb = document.querySelector('.ytb' + i);
     let s2btn = document.querySelector('.ytb_tab li:nth-child(' + i + ')');
@@ -145,7 +142,7 @@ for(let i = 1; i < 5; i++){
 
         btnTarget.classList.remove('target');
         s2btn.classList.add('target');
-
+        youtubeCounter()
         ytbTarget.classList.remove('target');
         s2ytb.classList.add('target');
     });
